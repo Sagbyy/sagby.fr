@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-family: 'Kanit', sans-serif;
+    background-color: #18181B;
+    height: 2000px;
+}
+
+
+/*NAVBAR*/
+
+.navbar{
+    background-image: linear-gradient( #070707, #00000000);
+    opacity: 90%;
+    height: 75px;
+}
+
+
+.nav-link{
+    font-size: 16px;
+    margin: 3px;
+    color: #fff!important;
+    font-weight: 500;
+}
+
+.sagby-logo{
+    height: 30px;
+}
+
+.slide-link{
+    font-family: "Kanit", sans-serif;
+    text-transform: uppercase;
+    overflow: hidden;
+    position: relative;
+}
+
+.slide-link span {
+    padding: 10px;
+    display: inline-block;
+    transition: transform 0.3s ease-out;
+}
+
+.slide-link span:nth-child(2){
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    left: 100%;
+}
+
+.slide-link:hover span{
+    transform: translateX(-100%);
+}
+
+
+
+
+
+
+
+/*Acceuil*/
+
+
+.acceuil{
+    margin-top: 8%;
+}
+#sagby{
+    height: 275px;
+    margin: 0 auto;
+    
+}
+
+.text-sagby{
+    color: white;
+    font-family: "Konit", sans-serif;
+    font-size: 55px;
+    font-weight: 800;
+}
+.text-junior{
+    color: white;
+    font-size: 30px;
+    font-family: "Konit", sans-serif;
+    padding: 10px;
+    font-weight: 300;
+}
+
+#anim{
+    color: #ffe04b;
+}
+
+
+
+
+/* WAVES */
+
+section.waves{
+    position: relative;
+    width: 100%;
+    height: 85vh;
+    background: #161b23;
+    overflow: hidden;
+    background-image: url(./assets/bg.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+section.waves .wave{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(./assets/wave.png);
+    background-size: 1000px 100px;
+}
+
+section.waves .wave.wave1{
+    animation: animate 30s linear infinite;
+    z-index: 1000;
+    opacity: 1;
+    animation-delay: 0s;
+    bottom: 0;
+}
+
+section.waves .wave.wave2{
+    animation: animate2 15s linear infinite;
+    z-index: 999;
+    opacity: 0.5;
+    animation-delay: -5s;
+    bottom: 10px;
+}
+
+section.waves .wave.wave3{
+    animation: animate 15s linear infinite;
+    z-index: 998;
+    opacity: 0.2;
+    animation-delay: -2s;
+    bottom: 15px;
+}
+
+section.waves .wave.wave4{
+    animation: animate2 15s linear infinite;
+    z-index: 997;
+    opacity: 0.7;
+    animation-delay: -5s;
+    bottom: 20px;
+}
+
+@keyframes animate{
+    0%
+    {
+        background-position-x: 0;
+    }
+    100%
+    {
+        background-position-x: 1000px;
+    }
+}
+
+@keyframes animate2{
+    0%
+    {
+        background-position-x: 0;
+    }
+    100%
+    {
+        background-position-x: -1000px;
+    }
+}
+
+
+
+
+
+/*ABOUT*/
+
+section {
+    background-color: #18181B;
+}
+
+#about{
+    padding: 10vmin 0;
+}
+
+#about .row .col-md-6 .pray img{
+    opacity: 0.8;
+    width: 80%;
+    border-radius: 3px;
+    box-shadow: 0px 25px 42px rgba(0, 0, 0, 0);
+}
+
+#about .row .col-md-6:last-child{
+    position: relative;
+}
+
+#about .row .col-md-6 .panel{
+    position: absolute;
+    top: 17vmin;
+    left: -18vmin;
+    background: #101013;
+    border-radius: 3px;
+    text-align: left;
+    padding: 10vmin 5vmin 10vmin 10vmin;
+    box-shadow: 0px 25px 42px rgba(0, 0, 0, 0);
+    font-family: "Kanit", sans-serif;
+    z-index: 1;
+}
+
+#about .row .col-md-6 .panel p{
+    color: white;
+    font-weight: 300;
+}
+
+#about .row .col-md-6 .panel h1{
+    color: #ffe04b;
+}
+
+.tilt-box-wrap{
+    position: relative;
+    transition: all 0.6s ease-out;
+    perspective: 1000px;
+}
+
+.tilt-box-wrap:hover{
+    transition: all 0.3s linear;
+    transform: scale(1.1);
+}
+
+.tilt-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    transition: all 0.6s ease-out;
+    transform: rotateX(0deg) rotateY(0deg);
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+.tilt-box strong{ 
+    transform: translateZ(40px);
+}
+
+.t_over{
+    width: 33.333%;
+    height: 33.333%;
+    position: absolute;
+    z-index: 1;
+}
+
+.t_over:nth-child(1){ left: 0; top: 0; }
+.t_over:nth-child(2){ left: 33.333%; top: 0; }
+.t_over:nth-child(3){ left: 66.666%; top: 0; }
+.t_over:nth-child(4){ left: 0; top: 33.333%; }
+.t_over:nth-child(5){ left: 33.333%; top: 33.333%; }
+.t_over:nth-child(6){ left: 66.666%; top: 33.333%; }
+.t_over:nth-child(7){ left: 0; top: 66.666%; }
+.t_over:nth-child(8){ left: 33.333%; top: 66.666%; }
+.t_over:nth-child(9){ left: 66.666%; top: 66.666%; }
+
+.t_over:nth-child(1):hover ~ .tilt-box{ transform: rotateX(-20deg) rotateY(20deg) }
+.t_over:nth-child(2):hover ~ .tilt-box{ transform: rotateX(-20deg) rotateY(0deg) }
+.t_over:nth-child(3):hover ~ .tilt-box{ transform: rotateX(-20deg) rotateY(-20deg) }
+.t_over:nth-child(4):hover ~ .tilt-box{ transform: rotateX(0deg) rotateY(20deg) }
+.t_over:nth-child(5):hover ~ .tilt-box{ transform: rotateX(0deg) rotateY(0deg) }
+.t_over:nth-child(6):hover ~ .tilt-box{ transform: rotateX(0deg) rotateY(-20deg) }
+.t_over:nth-child(7):hover ~ .tilt-box{ transform: rotateX(20deg) rotateY(20deg) }
+.t_over:nth-child(8):hover ~ .tilt-box{ transform: rotateX(20deg) rotateY(0deg) }
+.t_over:nth-child(9):hover ~ .tilt-box{ transform: rotateX(20deg) rotateY(-20deg) }
+
+
+
+
+
+/* Small devices (tablets, 768px and up) */
+@media (max-width: 770px) {
+    #about .row .col-md-6 .panel {
+        top: -100vmin;
+        left: 17vmin;
+        right: 4vmin;
+        font-size: 13px;
+    }
+
+}
